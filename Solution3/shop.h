@@ -20,6 +20,7 @@ protected:
 class Shop {
 
 public:
+	Shop();
 	Shop(std::string name, std::initializer_list<std::shared_ptr<Item>> items);
 	Shop(std::string name, std::string fileName);
 	~Shop();

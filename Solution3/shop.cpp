@@ -17,7 +17,7 @@ void Potion::Describe(){
 
 Shop::Shop(std::string name, std::initializer_list<std::shared_ptr<Item>> items) : m_name(name), m_items(items) {}
 
-Shop::Shop(std::string name, std::string fileName) : m_fileStream(name), m_fileName(fileName) {
+Shop::Shop(std::string name, std::string fileName) : m_name(name), m_fileName(fileName) {
 	m_fileStream.open(m_fileName);
 	if (!m_fileStream.is_open()) throw std::bad_exception();
 }
